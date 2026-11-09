@@ -1,0 +1,16 @@
+.venv
+venv
+__pycache__
+*.py[cod]
+*.pdf
+*.xlsx
+samples
+app.py
+run.bat
+run_web.bat
+.env
+.env.*
+.git
+.gitignore
+README.md
+scratch

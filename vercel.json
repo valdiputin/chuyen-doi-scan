@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "functions": {
+    "api/*.py": {
+      "maxDuration": 120,
+      "includeFiles": "converter.py"
+    }
+  },
+  "rewrites": [
+    { "source": "/api/pdf-to-excel", "destination": "/api/pdf_to_excel" },
+    { "source": "/api/pdf-to-word", "destination": "/api/pdf_to_word" },
+    { "source": "/api/office-convert", "destination": "/api/office_convert" }
+  ]
+}
+

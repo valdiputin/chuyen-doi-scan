@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chuyển Đổi Định Dạng Tài Liệu | Document Converter</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📑</text></svg>">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand" onclick="location.reload();">
+        <div class="brand-icon">🔄</div>
+        <span>Chuyển Đổi Định Dạng</span>
+      </div>
+
+      <div class="header-actions">
+        <!-- Đèn trạng thái Gotenberg Server -->
+        <div class="server-status-pill" id="server-status-pill" title="Kiểm tra trạng thái server chuyển đổi">
+          <span class="status-dot not_configured"></span>
+          <span class="status-text">Server: Đang kết nối...</span>
+        </div>
+
+        <!-- Chế độ sáng / tối -->
+        <button class="theme-toggle-btn" id="theme-toggle-btn" title="Chuyển chế độ sáng/tối">
+          🌙 Tối
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="main-content">
+    <!-- Home View -->
+    <div id="home-view">
+      <section class="hero-section">
+        <h1 class="hero-title">Bộ Công Cụ Chuyển Đổi Tài Liệu Đa Năng</h1>
+        <p class="hero-subtitle">
+          Chuyển đổi linh hoạt giữa PDF, Word, Excel, PowerPoint, Ảnh OCR, XML hóa đơn và Sách điện tử.
+          Nhanh chóng, chính xác và bảo mật.
+        </p>
+
+        <!-- Search Bar -->
+        <div class="search-bar-wrap">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="search-input" class="search-input"
+            placeholder="Tìm kiếm công cụ (ví dụ: PDF sang Excel, OCR, CSV, Word, XML...)">
+        </div>
+      </section>
+
+      <!-- Category Filter Tabs -->
+      <nav class="category-tabs" id="category-tabs">
+        <button class="category-tab active" data-group="all">Tất cả công cụ</button>
+        <button class="category-tab" data-group="group1">1. PDF ⇄ Office</button>
+        <button class="category-tab" data-group="group2">2. Office nội bộ</button>
+        <button class="category-tab" data-group="group3">3. Ảnh & OCR</button>
+        <button class="category-tab" data-group="group4">4. Dữ liệu</button>
+        <button class="category-tab" data-group="group5">5. Sách điện tử & Web</button>
+      </nav>
+
+      <!-- Tools Grid -->
+      <div class="tools-grid" id="tools-grid">
+        <!-- Được sinh động từ app.js -->
+      </div>
+    </div>
+
+    <!-- Tool Workspace View (Khi bấm vào một công cụ) -->
+    <div id="tool-view" class="tool-view" style="display: none;">
+      <!-- Nội dung từng công cụ sinh động từ app.js -->
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <div>Bộ công cụ chuyển đổi định dạng tài liệu © 2026. Xây dựng cho Vercel & Hugging Face Gotenberg.</div>
+  </footer>
+
+  <!-- Scripts: Module cốt lõi và nạp động CDN -->
+  <script src="js/cdn_loader.js"></script>
+  <script src="js/smart_value.js"></script>
+  <script src="js/tools/group1_pdf_office.js"></script>
+  <script src="js/tools/group3_image_ocr.js"></script>
+  <script src="js/tools/group4_data.js"></script>
+  <script src="js/tools/group2_office.js"></script>
+  <script src="js/tools/group5_ebook_web.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

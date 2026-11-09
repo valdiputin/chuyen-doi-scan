@@ -1,0 +1,27 @@
+# Environment & Virtualenv
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.py[cod]
+
+# Sensitive banking and test files
+*.pdf
+*.xlsx
+samples/
+
+# Local desktop app & scripts
+app.py
+run.bat
+
+# Secrets & local config
+.env
+.env.local
+.env.*.local
+
+# Temp & logs
+*.log
+test_*.py
+scratch/
+.system_generated/
